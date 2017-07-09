@@ -1,0 +1,17 @@
+.body-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.search-info-container {
+  width: 30%;
+}
+
+.list-gallery-container {
+  width: 60%;
+  margin-left: 50px;
+  padding-top: 25px;
+  padding-left: 40px;
+}
