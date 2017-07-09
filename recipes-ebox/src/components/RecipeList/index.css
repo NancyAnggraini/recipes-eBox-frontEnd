@@ -1,10 +1,16 @@
-.recipe-list-container {
+.recipe-gallery-container {
   background-color: #34495e !important;
   width: 105%;
-  height: 400px;
+  max-height: 400px;
   display: flex;
   flex-wrap: wrap;
   padding-top: 20px;
   padding-left: 30px;
   padding-right: 30px;
+  padding-bottom: 20px;
+}
+
+.recipeList-container {
+  overflow-y: scroll;
+  width: 40%;
 }

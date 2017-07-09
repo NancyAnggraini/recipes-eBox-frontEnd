@@ -9,29 +9,27 @@ const styles = {
     justifyContent: 'space-around',
   },
   gridList: {
-    width: 500,
-    height: 450,
+    width: 400,
+    height: 360,
     overflowY: 'auto',
   },
 };
 
 const GalleryList = ({ recipes }) => (
   <div className="gallery-list" style={ styles.root }>
-    Gallery
+    <GridList
+      cellHeight={ 180 }
+      style={ styles.gridList }
+    >
+      {recipes.map((recipe) => (
+        <GridTile
+          key={ recipe.id }
+        >
+          <img src={ recipe.photoUrl } alt={ recipe.name }/>
+        </GridTile>
+      ))}
+    </GridList>
   </div>
 );
 
 export default GalleryList;
-
-// <GridList
-//   cellHeight={ 180 }
-//   style={ styles.gridList }
-// >
-//   {recipes.map((recipe) => (
-//     <GridTile
-//       key={ recipe.id }
-//     >
-//       <img src={ recipe.photoUrl } />
-//     </GridTile>
-//   ))}
-// </GridList>
