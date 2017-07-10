@@ -1,0 +1,33 @@
+.signInPaper {
+  background-color: #34495e !important;
+  margin-top: 40px;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+h2 {
+  color: #ffefd5;
+  font-family: verdana;
+}
+
+.submitButton {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: 120px;
+}
+
+.sign-up-link {
+  font-size: smaller;
+  color: #3498db;
+}
+
+.link {
+  color: #ffefd5;
+}

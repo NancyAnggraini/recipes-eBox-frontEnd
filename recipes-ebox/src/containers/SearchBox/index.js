@@ -61,7 +61,7 @@ class SearchBox extends Component {
   render() {
     return(
       <Paper className="paper" zDepth={ 2 }>
-        <h3>Find recipes:</h3>
+        <h3 className="searchBox-title">Find recipes:</h3>
         <form onSubmit={ this.handleSubmit }>
           <TextField
             hintText="enter recipe name / keyword"
@@ -76,6 +76,7 @@ class SearchBox extends Component {
             />
           <RaisedButton
             className="searchButton"
+            type="submit"
             label="SEARCH"
             backgroundColor="#2c3e50"
             labelColor="#ffefd5"

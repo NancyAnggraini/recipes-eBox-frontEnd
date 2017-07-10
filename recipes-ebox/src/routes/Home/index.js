@@ -6,7 +6,6 @@ import About from '../../components/About';
 import HomepageHeader from '../../containers/HomepageHeader';
 import SearchBox from '../../containers/SearchBox';
 import RecipeList from '../../components/RecipeList';
-import Footer from '../../components/Footer';
 import { fetchRecipes } from '../../store/actions.js';
 
 class Home extends Component {
@@ -50,7 +49,6 @@ class Home extends Component {
               <h1>{ this.state.noResults }</h1>
             </div>
           </div>
-          <Footer />
         </MainContainer>
       );
     }
@@ -68,7 +66,6 @@ class Home extends Component {
             <RecipeList recipes={ this.props.recipes }/>
           </div>
         </div>
-        <Footer />
       </MainContainer>
     );
   }
