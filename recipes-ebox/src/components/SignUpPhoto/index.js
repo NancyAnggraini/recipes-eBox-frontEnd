@@ -1,6 +1,5 @@
 import React from 'react';
 import './index.css';
-import Paper from 'material-ui/Paper';
 import welcomeImage from '../../images/welcome.png';
 
 const styles = {

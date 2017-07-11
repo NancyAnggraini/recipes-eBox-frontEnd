@@ -30,44 +30,50 @@ class Home extends Component {
     }
   }
 
+  changeSearchState = (param) => {
+    this.setState({
+      search: !param
+    })
+  }
+
   componentDidMount() {
     this.props.dispatch(fetchRecipes());
   }
 
   render() {
     console.log(this.props);
-    if (!this.props.recipes.length) {
+
       return(
         <MainContainer>
           <HomepageHeader />
           <div className="body-container">
             <div className="search-info-container">
-              <SearchBox changeListTitle={ this.changeListTitle }/>
+              <SearchBox
+                searchBoxTitle="Find recipes:"
+                changeListTitle={ this.changeListTitle }
+                changeSearchState={ this.changeSearchState }
+                />
               <About />
             </div>
             <div className="list-gallery-container">
-              <h1>{ this.state.noResults }</h1>
+              {
+                (!this.props.recipes.length) &&
+                <div>
+                  <h1>{ this.state.noResults }</h1>
+                </div>
+              }
+              {
+                !(!this.props.recipes.length) &&
+                <div>
+                  <h1>{ this.state.listTitle }</h1>
+                  <RecipeList recipes={ this.props.recipes }/>
+                </div>
+              }
             </div>
           </div>
         </MainContainer>
       );
-    }
 
-    return(
-      <MainContainer>
-        <HomepageHeader />
-        <div className="body-container">
-          <div className="search-info-container">
-            <SearchBox changeListTitle={ this.changeListTitle }/>
-            <About />
-          </div>
-          <div className="list-gallery-container">
-            <h1>{ this.state.listTitle }</h1>
-            <RecipeList recipes={ this.props.recipes }/>
-          </div>
-        </div>
-      </MainContainer>
-    );
   }
 }
 

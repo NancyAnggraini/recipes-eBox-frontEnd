@@ -9,23 +9,23 @@ import RaisedButton from 'material-ui/RaisedButton';
 class HomepageHeader extends Component {
   render() {
     return(
-      <Toolbar className="wrapper" >
+      <Toolbar className="homepageHeader-wrapper" >
         <ToolbarGroup>
-          <img src={ logo } className="logo" alt="logo" />
+          <img src={ logo } className="homepageHeader-logo" alt="logo" />
           <ToolbarTitle
-            className="title"
+            className="homepageHeader-title"
             text="Start your recipes collection!"
             />
         </ToolbarGroup>
         <ToolbarGroup>
-          <Link to="/users/sign_in" className="button">
+          <Link to="/users/sign_in" className="homepageHeader-button">
             <RaisedButton
               label="SIGN IN"
               backgroundColor="#3498db"
               labelColor="#ecf0f1"
             />
           </Link>
-          <Link to="/users/sign_up" className="button">
+          <Link to="/users/sign_up" className="homepageHeader-button">
             <RaisedButton
               label="SIGN UP"
               backgroundColor="#3498db"
