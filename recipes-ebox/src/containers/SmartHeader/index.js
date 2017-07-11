@@ -7,6 +7,22 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 class SmartHeader extends Component {
   render() {
+    if(this.props.userId === undefined && this.props.firstName === undefined && this.props.lastName === undefined) {
+      return(
+        <Toolbar className="smartHeader-wrapper" >
+          <ToolbarGroup>
+            <Link to="/">
+              <img src={ logo } className="logo" alt="logo" />
+            </Link>
+            <ToolbarTitle
+              className="smartHeader-title"
+              text={ "Hi, Stranger!" }
+              />
+          </ToolbarGroup>
+        </Toolbar>
+      );
+    }
+
     return(
       <Toolbar className="smartHeader-wrapper" >
         <ToolbarGroup>
