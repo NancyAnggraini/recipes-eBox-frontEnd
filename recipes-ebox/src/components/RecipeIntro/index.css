@@ -1,0 +1,18 @@
+.recipeIntro-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.recipeIntro-subContainer {
+  /*border: 1px solid white;*/
+  width: 60%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+.recipeIntro-subContainer p {
+  color: white;
+  font-size: smaller;
+}

@@ -11,6 +11,19 @@ export const fetchRecipes = () => (dispatch, getState) => {
     })
 }
 
+export const addRecipe = (recipe) => ({
+  type: 'ADD_RECIPE',
+  recipe
+})
+
+export const fetchRecipe = (recipeId) => (dispatch, getState) => {
+  fetch(`http://localhost:8080/recipes/${ recipeId }`)
+    .then( response => response.json() )
+    .then( recipe => {
+      dispatch(addRecipe(recipe));
+    })
+}
+
 export const fetchSearchedRecipes = (searchedBy) => (dispatch, getState) => {
   fetch(`http://localhost:8080/recipes/search?query=${ searchedBy }`)
     .then( response => response.json() )

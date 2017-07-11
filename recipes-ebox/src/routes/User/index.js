@@ -26,7 +26,7 @@ class User extends Component {
       });
     } else {
       this.setState({
-        listTitle: 'Check out your collection',
+        listTitle: 'Check out your collection:',
       });
     }
   }
@@ -47,8 +47,8 @@ class User extends Component {
       <MainContainer>
         <SmartHeader
           userId={ this.props.currentUser.id }
-          firstName={ this.props.currentUser.firstName}
-          lastName={ this.props.currentUser.lastName}
+          firstName={ this.props.currentUser.firstName }
+          lastName={ this.props.currentUser.lastName }
           buttonName="create recipe"
           buttonColor="#3498db"
           />
