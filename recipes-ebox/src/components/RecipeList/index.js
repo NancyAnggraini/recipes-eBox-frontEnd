@@ -8,7 +8,7 @@ import GalleryList from '../../components/GalleryList';
 
 
 const RecipeList = ({ recipes }) => {
-  console.log('in da recipeList');
+  // console.log('in da recipeList');
   if (!recipes.length) {
     return(
       <Paper className="recipe-gallery-container" zDepth={ 2 }>

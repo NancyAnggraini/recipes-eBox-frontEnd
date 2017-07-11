@@ -52,16 +52,25 @@ class SearchBox extends Component {
 
     this.props.changeListTitle(this.state.query);
 
+    if(this.state.query.length > 0) {
+      this.props.changeSearchState(true);
+    } else {
+      this.props.changeSearchState(false);
+    }
+
     //to reset the search:
     this.setState({
       query: '',
     })
+
+
+
   }
 
   render() {
     return(
       <Paper className="paper" zDepth={ 2 }>
-        <h3 className="searchBox-title">Find recipes:</h3>
+        <h3 className="searchBox-title">{ this.props.searchBoxTitle }</h3>
         <form onSubmit={ this.handleSubmit }>
           <TextField
             hintText="enter recipe name / keyword"
