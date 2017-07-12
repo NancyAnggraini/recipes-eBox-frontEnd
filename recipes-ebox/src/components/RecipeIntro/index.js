@@ -3,7 +3,7 @@ import './index.css';
 
 const RecipeIntro = ({ recipe }) => (
   <div className="recipeIntro-container">
-    <img src={ recipe.photoUrl } alt={ recipe.name } width="350" height="250px" />
+    <img src={ recipe.photoUrl } alt={ recipe.name } width="350px" height="250px" />
     <div className="recipeIntro-subContainer">
       <p>{'Reference Link: ' + recipe.weblink }</p>
       <p>

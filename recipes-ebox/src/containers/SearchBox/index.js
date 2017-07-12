@@ -21,7 +21,7 @@ const styles = {
     color: '#ffefd5',
   },
   hintStyle: {
-    color: '7f8c8d',
+    color: '#7f8c8d',
   },
 };
 
