@@ -34,5 +34,3 @@ class App extends Component {
 }
 
 export default App;
-
-// <Route exact path="/users/::user_id/recipes/new" component={ NewRecipe } />

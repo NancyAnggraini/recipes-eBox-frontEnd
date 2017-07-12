@@ -1,0 +1,28 @@
+.recipeIntroForm-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.recipeIntroForm-subContainer {
+  /*border: 1px solid white;*/
+  width: 60%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+.recipeIntroForm-subContainer p {
+  color: white;
+  font-size: smaller;
+}
+
+.recipeIntroForm-photo {
+  width: 350px;
+  height: 250px;
+  border: 1px solid white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
