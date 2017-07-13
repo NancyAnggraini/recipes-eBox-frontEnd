@@ -8,6 +8,7 @@ import IngredientsForm from '../../containers/IngredientsForm';
 import NewIngredientList from '../../components/NewIngredientList';
 import CookingStepsForm from '../../containers/CookingStepsForm';
 import NewCookingStepList from '../../components/NewCookingStepList';
+import AlertDialog from '../../components/AlertDialog';
 import { fetchCurrentUser } from '../../store/actions.js';
 import Paper from 'material-ui/Paper';
 import TextField from 'material-ui/TextField';
@@ -41,7 +42,8 @@ class NewRecipe extends Component {
       weblink: '',
       description: '',
       ingredients: [],
-      cookingSteps: []
+      cookingSteps: [],
+      openSaveAlert: false
     }
   }
 
@@ -93,6 +95,26 @@ class NewRecipe extends Component {
     })
   }
 
+  handleSaveRecipeButton = (e) => {
+      e.preventDefault();
+      this.setState({
+        openSaveAlert: true
+      })
+  }
+
+  closeSaveAlert = () => {
+    this.setState({
+      openSaveAlert: false
+    })
+    this.props.history.push("/users/" + this.props.match.params.user_id)
+  }
+
+  closeCancelAlert = () => {
+    this.setState({
+      openSaveAlert: false
+    })
+  }
+
   componentDidMount() {
     this.props.dispatch(fetchCurrentUser(this.props.match.params.user_id));
   }
@@ -106,8 +128,14 @@ class NewRecipe extends Component {
           lastName={ this.props.currentUser.lastName }
           buttonName="save recipe"
           buttonColor="#c0392b"
+          handleButtonClick = { this.handleSaveRecipeButton }
           />
-        <Paper className="newRecipe-container">
+        <AlertDialog
+          openSaveAlert={ this.state.openSaveAlert }
+          closeSaveAlert={ this.closeSaveAlert }
+          closeCancelAlert={ this.closeCancelAlert }
+          />
+        <Paper className="newRecipe-container" zDepth={ 0 }>
           <div className="newRecipe-title">
             <TextField
               hintText="enter recipe name"

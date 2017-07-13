@@ -24,6 +24,8 @@ const GalleryList = ({ recipes }) => (
       {recipes.map((recipe) => (
         <GridTile
           key={ recipe.id }
+          title={ recipe.name }
+          subtitle={ <span>{ recipe.recipeOwner }</span> }
         >
           <img src={ recipe.photoUrl } alt={ recipe.name }/>
         </GridTile>

@@ -39,7 +39,9 @@ class CookingStepsForm extends Component {
 
   handleAddCookingStep = (e) => {
     e.preventDefault();
-    this.props.addCookingStep(this.state.newStep);
+    if(this.state.newStep.length > 0) {
+      this.props.addCookingStep(this.state.newStep);
+    }
     this.setState({
       newStep: ''
     })

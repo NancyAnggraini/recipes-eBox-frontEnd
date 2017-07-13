@@ -21,12 +21,14 @@
   background-color: black;
   border-top-right-radius: 20px;
   overflow-x: hidden;
+  min-height: 600px;
 }
 
 .newRecipe-half {
   width: 50%;
   background-color: black;
   padding: 20px;
+  margin-left: 15px;
 }
 
 .divider{

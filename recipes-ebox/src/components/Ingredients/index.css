@@ -1,7 +1,15 @@
 .ingredients-container {
-  color: white !important;
+  margin-top: 30px;
+  margin-left: 15px;
 }
 
-.list-item {
-  color: #ffdab9 !important;
+.ingredients-container h3 {
+  color: white !important;
+  margin-bottom: 0;
+}
+
+.ingredient-list-item {
+  color: white !important;
+  font-size: medium !important;
+  height: 30px !important;
 }

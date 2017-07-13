@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
 import { List, ListItem } from 'material-ui/List';
+import ActionLabel from 'material-ui/svg-icons/action/label';
 import { CircularProgress } from 'material-ui';
 
 const Ingredients = ({ ingredients }) => {
@@ -21,7 +22,12 @@ const Ingredients = ({ ingredients }) => {
       <List>
         {
           ingredients.map( (ingredient, index) =>
-            <ListItem className="list-item" key={ index } primaryText={ ingredient } />
+            <ListItem
+              className="ingredient-list-item"
+              key={ index }
+              primaryText={ ingredient }
+              leftIcon={ <ActionLabel /> }
+              />
           )
         }
       </List>

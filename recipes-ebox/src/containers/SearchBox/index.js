@@ -63,8 +63,6 @@ class SearchBox extends Component {
       query: '',
     })
 
-
-
   }
 
   render() {

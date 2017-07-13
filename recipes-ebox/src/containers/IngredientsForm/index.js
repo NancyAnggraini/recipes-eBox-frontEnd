@@ -39,7 +39,9 @@ class IngredientsForm extends Component {
 
   handleAddIngredient = (e) => {
     e.preventDefault();
-    this.props.addIngredient(this.state.newIngredient);
+    if(this.state.newIngredient.length > 0) {
+      this.props.addIngredient(this.state.newIngredient);
+    }
     this.setState({
       newIngredient: ''
     })

@@ -51,7 +51,7 @@ class SignInForm extends Component {
   }
 
   handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     console.log('submit sign in');
   }
 
@@ -82,14 +82,16 @@ class SignInForm extends Component {
             onChange={ this.handlePassword }
             value={ this.state.password }
             />
-          <RaisedButton
-            className="submitButton"
-            type="submit"
-            label="Submit"
-            backgroundColor="#2c3e50"
-            labelColor="#ffefd5"
-            onClick={ this.handleSubmit }
-            />
+          <Link to="/users/1/">
+            <RaisedButton
+              className="submitButton"
+              type="submit"
+              label="Submit"
+              backgroundColor="#2c3e50"
+              labelColor="#ffefd5"
+              onClick={ this.handleSubmit }
+              />
+          </Link>
         </form>
         <p className="sign-up-link">Dont have an account? Sign up <Link to="/users/sign_up" className="link">here</Link>.</p>
       </Paper>

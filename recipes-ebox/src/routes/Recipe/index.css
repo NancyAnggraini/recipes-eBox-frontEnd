@@ -8,29 +8,39 @@
 
 .recipe-title {
   width: 30%;
-  background-color: black;
-  color: white;
+  background-color: #37474F;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   text-align: center;
 }
 
+.recipe-title h2 {
+  color: white;
+}
+
 .recipe-half-container {
   display: flex;
   flex-wrap: nowrap;
-  background-color: black;
+  background-color: #37474F;
   border-top-right-radius: 20px;
   overflow-x: hidden;
+  min-height: 600px;
 }
 
-.recipe-half {
-  width: 50%;
-  background-color: black;
+.recipe-half1 {
+  width: 55%;
+  background-color: #37474F;
+  padding: 20px;
+}
+
+.recipe-half2 {
+  width: 45%;
+  background-color: #37474F;
   padding: 20px;
 }
 
 .divider{
-  border-left: 3px solid white;
+  border-left: 1px solid white !important;
   margin-top: 30px;
   margin-bottom: 30px;
 }

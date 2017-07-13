@@ -15,7 +15,7 @@ class User extends Component {
     this.state = {
       listTitle: 'Check out your collection:',
       noResults: 'No results. Please search again.',
-      search: false
+      search: false,
     }
   }
 
@@ -37,6 +37,11 @@ class User extends Component {
       })
   }
 
+  handleCreateRecipeButton = (e) => {
+      e.preventDefault();
+      this.props.history.push("/users/" + this.props.match.params.user_id + "/new_recipe")
+  }
+
   componentDidMount() {
     this.props.dispatch(fetchCurrentUser(this.props.match.params.user_id));
     this.props.dispatch(fetchCurrentUserRecipes(this.props.match.params.user_id));
@@ -51,6 +56,7 @@ class User extends Component {
           lastName={ this.props.currentUser.lastName }
           buttonName="create recipe"
           buttonColor="#3498db"
+          handleButtonClick = { this.handleCreateRecipeButton }
           />
         <div className="user-body-container">
           <div className="user-search-container">
@@ -67,14 +73,20 @@ class User extends Component {
               (this.state.search === false) &&
               <div>
                 <h1>{ this.state.listTitle }</h1>
-                <RecipeList recipes={ this.props.currentUserRecipes }/>
+                <RecipeList
+                  recipes={ this.props.currentUserRecipes }
+                  currentUser={ this.props.currentUser }
+                  />
               </div>
             }
             {
               (this.state.search === true) && (this.props.searchedRecipes.length > 0) &&
               <div>
                 <h1>{ this.state.listTitle }</h1>
-                <RecipeList recipes={ this.props.searchedRecipes }/>
+                <RecipeList
+                  recipes={ this.props.searchedRecipes }
+                  currentUser={ this.props.currentUser }
+                  />
               </div>
             }
             {
