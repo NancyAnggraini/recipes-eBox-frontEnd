@@ -7,8 +7,8 @@ import RecipeListItem from '../../containers/RecipeListItem';
 import GalleryList from '../../components/GalleryList';
 
 
-const RecipeList = ({ recipes }) => {
-  if (!recipes.length) {
+const RecipeList = ( props ) => {
+  if (!props.recipes.length) {
     return(
       <Paper className="recipe-gallery-container" zDepth={ 2 }>
         <List>
@@ -23,12 +23,12 @@ const RecipeList = ({ recipes }) => {
     <Paper className="recipe-gallery-container" zDepth={ 2 }>
       <List className="recipeList-container">
         {
-          recipes.map(recipe =>
-            <RecipeListItem key={ recipe.id } recipe={ recipe } />
+          props.recipes.map(recipe =>
+            <RecipeListItem key={ recipe.id } recipe={ recipe } currentUser={ props.currentUser } />
           )
         }
       </List>
-      <GalleryList recipes={ recipes }/>
+      <GalleryList recipes={ props.recipes }/>
     </Paper>
   );
 }

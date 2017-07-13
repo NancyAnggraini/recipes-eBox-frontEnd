@@ -27,19 +27,19 @@ class Recipe extends Component {
             firstName={ this.props.currentUser.firstName }
             lastName={ this.props.currentUser.lastName }
             buttonName="edit recipe"
-            buttonColor="#1abc9c"
+            buttonColor="#424242"
             />
-          <Paper className="recipe-body-container">
+          <Paper className="recipe-body-container" zDepth={ 0 }>
             <div className="recipe-title">
               <h2>{ this.props.recipe.name }</h2>
             </div>
             <div className="recipe-half-container">
-              <div className="recipe-half">
+              <div className="recipe-half1">
                 <RecipeIntro recipe={ this.props.recipe }/>
                 <Ingredients ingredients={ this.props.recipe.ingredients }/>
               </div>
               <div className="divider"></div>
-              <div className="recipe-half">
+              <div className="recipe-half2">
                 <CookingSteps cookingSteps={ this.props.recipe.cookingMethods }/>
               </div>
             </div>

@@ -1,6 +1,6 @@
 const currentUser = (state = {}, action) => {
   switch (action.type) {
-    case 'ADD_CURRENT_USER':
+    case 'SELECT_CURRENT_USER':
       let newState = {...action.currentUser};
       return newState;
     default:
