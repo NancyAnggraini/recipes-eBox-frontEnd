@@ -11,9 +11,8 @@ const RecipeIntro = ({ recipe }) => (
       <a href={ recipe.weblink }>{ recipe.weblink }</a>
       <br></br>
       <p>
-        Gummi bears ice cream brownie muffin candy I love tiramisu.
-        I love dessert gummi bears macaroon chocolate pie.
-        I love pastry gummi bears sweet pastry.
+        This easy to make banana bread is delicious warm or cold.
+        Perfect for a quick breakfast or for an afternoon tea.
       </p>
     </div>
   </div>
