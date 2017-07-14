@@ -28,7 +28,7 @@ const RecipeList = ( props ) => {
           )
         }
       </List>
-      <GalleryList recipes={ props.recipes }/>
+      <GalleryList recipes={ props.recipes } currentUser={ props.currentUser }/>
     </Paper>
   );
 }

@@ -20,7 +20,10 @@ class RecipeListItem extends Component {
     }
 
     return(
-      <Link to={"/users/" + this.props.currentUser.id + "/recipes/" + this.props.recipe.id } style={{ textDecoration: "none" }}>
+      <Link
+        to={"/users/" + this.props.currentUser.id + "/recipes/" + this.props.recipe.id }
+        style={{ textDecoration: "none" }}
+        >
         <ListItem
           className="list-item"
           leftAvatar={ <Avatar backgroundColor={ blue500 } /> }
